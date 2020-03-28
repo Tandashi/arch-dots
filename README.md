@@ -25,6 +25,12 @@ glava --copy-config
 ```
 Then overwrite the config with repo once
 
+Using Teamspeak and Spotify at same time. Could be that teamspeak3 mutes spotify if so comment out the following in `/etc/pulse/default.pa`:
+```
+load-module module-role-cork
+```
+
+
 
 ## Hardware Information
 - Windows 10 installation is on `sdd1`
