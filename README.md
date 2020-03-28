@@ -1,7 +1,4 @@
 # Arch Linux Dotfiles
-TODO include:
-- /etc/lightdm
-- .config
 
 # Installation
 ## Dependencies
