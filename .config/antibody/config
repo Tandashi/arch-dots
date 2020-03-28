@@ -1,0 +1,13 @@
+#!/bin/sh
+
+antibody bundle zsh-users/zsh-completions
+antibody bundle zsh-users/zsh-autosuggestions
+antibody bundle zsh-users/zsh-syntax-highlighting
+
+antibody bundle denysdovhan/spaceship-prompt
+
+# Theme Settings
+SPACESHIP_CHAR_SYMBOL="> "
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ffffff,gb=bold,underline"
+bindkey '^ ' autosuggest-accept

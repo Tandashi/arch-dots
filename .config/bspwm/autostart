@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pgrep -x vivaldi-bin > /dev/null && echo "Vivalid already running. Not starting another instance." || (vivaldi-stable &)
+
+pgrep -x Discord > /dev/null && echo "Discord already running. Not starting another instance." || (discord &)
+

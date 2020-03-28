@@ -1,0 +1,51 @@
+#!/bin/sh
+
+export PATH="$PATH:~/Documents/libs/flutter/bin"
+
+# Start sxhkd
+sxhkd &
+
+# Start dunst
+dunst &
+
+# Start pulseaudio Server
+pulseaudio -D
+
+# Start GLava
+~/.config/glava/launch.sh
+
+# Set Background Wallpaper
+feh --bg-center ~/Pictures/Wallpaper/CityBrown.jpg
+
+# Create 5 Virutal Monitors
+bspc monitor DP-0 -d term dev
+bspc monitor HDMI-0 -d chat www music
+
+# Configurations
+bspc config border_radius 0
+bspc config border_width 0
+bspc config borderless_monocle true
+
+# Rules
+## Web Desktop
+bspc rule --add Vivaldi-stable	desktop="www"	follow=on
+## Dev Desktop
+bspc rule --add Code			desktop="dev"	follow=on
+bspc rule --add jetbrains-idea  desktop="dev"   follow=on
+## Term Desktop
+bspc rule --add kitty           desktop="term"  follow=on
+## Music Desktop
+
+## Chat Desktop
+bspc rule --add discord         desktop="chat"  follow=off
+bspc rule --add "TeamSpeak 3"	desktop="chat"	follow=off
+
+# Run autostarts
+~/.config/bspwm/autostart
+
+# Start polybar
+~/.config/polybar/launch.sh
+
+# Start Picom
+picom --config ~/.config/picom/picom.conf -b
+

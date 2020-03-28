@@ -1,0 +1,21 @@
+# wm independent shotcuts
+
+# Start Terminal
+super + Return
+	kitty
+
+super + d
+	dmenu_run
+
+# bspwm dependent shotcuts
+
+# Quit / Restart bspwm
+super + shift + {q,r}
+	bspc {quit,wm -r}
+
+# Close window
+super + w
+	bspc node -c
+
+super + {t,shift + t,s,f}
+    bspc node -t '~{tiled,pseudo_tiled,floating,fullscreen}'
