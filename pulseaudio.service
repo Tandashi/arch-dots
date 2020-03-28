@@ -1,0 +1,9 @@
+[Unit]
+Description=PulseAudio Daemon
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simplePrivateTmp=true
+ExecStart=/usr/bin/pulseaudio –system –realtime –disallow-exit –no-cpu-limit
