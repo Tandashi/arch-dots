@@ -1,6 +1,10 @@
 #!/bin/bash
 
+# Vivaldi
 pgrep -x vivaldi-bin > /dev/null && echo "Vivalid already running. Not starting another instance." || (vivaldi-stable &)
 
+# Discord
 pgrep -x Discord > /dev/null && echo "Discord already running. Not starting another instance." || (discord &)
 
+# Telegram
+pgrep -x telegram-deskto > /dev/null && echo "Telegram already running. Not starting another instance." || (telegram-desktop &)
