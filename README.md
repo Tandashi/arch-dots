@@ -14,6 +14,7 @@
 - glava
 - zsh
 - anitbody
+- spicetify
 
 ### Fonts
 - Font Awesome 5 Free
