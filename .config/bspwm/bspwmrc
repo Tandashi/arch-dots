@@ -1,11 +1,11 @@
 #!/bin/sh
 
 # Set Background Wallpaper
-feh --bg-center ~/Pictures/Wallpaper/CityBrown.jpg
+feh --bg-center ~/Pictures/Wallpaper/Samurai.jpg
 
 # Create 5 Virutal Monitors
 bspc monitor DP-0 -d term dev reading
-bspc monitor HDMI-0 -d www social music
+bspc monitor HDMI-0 -d www social music streaming
 
 # Configurations
 bspc config border_radius 14
@@ -14,33 +14,36 @@ bspc config borderless_monocle true
 
 # Rules
 ## Web Desktop
-bspc rule --add Vivaldi-stable	    desktop="www"       follow=on
+bspc rule --add Vivaldi-stable	    desktop="reading"   follow=off
 ## Dev Desktop
 bspc rule --add Code			    desktop="dev"       follow=on
 bspc rule --add jetbrains-idea      desktop="dev"       follow=on
 ## Term Desktop
 bspc rule --add kitty               desktop="term"      follow=on
 ## Music Desktop
-
+bspc rule --add "spotify"           desktop="music"     state=floating
 ## Chat Desktop
 bspc rule --add discord             desktop="social"    follow=off
 bspc rule --add "TeamSpeak 3"	    desktop="social"    follow=off
 bspc rule --add "TelegramDesktop"   desktop="social"    follow=off
 
 # Start sxhkd
-sxhkd &
+~/.config/sxhkd/launch.sh
 
 # Start dunst
-dunst &
+~/.config/dunst/launch.sh
 
 # Start GLava
 ~/.config/glava/launch.sh
 
-# Run autostarts
-~/.config/bspwm/autostart
-
 # Start polybar
 ~/.config/polybar/launch.sh
+
+# Start conky
+~/.config/conky/launch.sh
+
+# Run autostarts
+~/.config/bspwm/autostart
 
 # Start Picom
 picom --config ~/.config/picom/picom.conf -b
