@@ -15,6 +15,7 @@
 - zsh
 - anitbody
 - spicetify
+- xdo
 
 ### Fonts
 - Font Awesome 5 Free
