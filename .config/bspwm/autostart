@@ -1,5 +1,28 @@
 #!/bin/bash
 
+function placement_spotify() {
+    # Wait till the process has been started
+    sleep 2
+
+    xdo activate -n spotify
+    bspc node -d music
+    
+    xdo activate -n spotify
+    bspc node -t floating
+
+    MONITOR_WIDTH=1920
+    MONITOR_HEIGHT=1080
+    SPOTIFY_WINDOW=`xdotool search --name spotify | grep -m 1 ""`
+    SPOTIFY_WINDOW_WIDTH=800
+    SPOTIFY_WINDOW_HEIGHT=125
+    SPOTIFY_X=$((($MONITOR_WIDTH / 2) - ($SPOTIFY_WINDOW_WIDTH / 2)))
+    SPOTIFY_Y=$((($MONITOR_HEIGHT / 2) - ($SPOTIFY_WINDOW_HEIGHT / 2) + 350))
+
+    xdotool windowmove $SPOTIFY_WINDOW $SPOTIFY_X $SPOTIFY_Y
+    xdotool windowsize $SPOTIFY_WINDOW $SPOTIFY_WINDOW_WIDTH $SPOTIFY_WINDOW_HEIGHT
+}
+
+
 # Vivaldi
 pgrep -x vivaldi-bin > /dev/null && echo "Vivalid already running. Not starting another instance." || (vivaldi-stable &)
 
@@ -8,3 +31,6 @@ pgrep -x Discord > /dev/null && echo "Discord already running. Not starting anot
 
 # Telegram
 pgrep -x telegram-deskto > /dev/null && echo "Telegram already running. Not starting another instance." || (telegram-desktop &)
+
+# Spotify
+pgrep -x spotify > /dev/null && echo "Spotify already running. Not starting another instance." || ((spotify &) && placement_spotify)
