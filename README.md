@@ -17,6 +17,7 @@
 - spicetify
 - xdo
 - xdotool
+- conky
 
 ### Fonts
 - Font Awesome 5 Free
