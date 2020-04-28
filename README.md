@@ -19,6 +19,9 @@
 - xdotool
 - conky
 
+Scripts I'm using:
+- [puush](https://raw.githubusercontent.com/sunmockyang/puush-linux/master/puush)
+
 ### Fonts
 - Font Awesome 5 Free
 - Fira Code (Nerd Font patched)
