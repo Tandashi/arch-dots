@@ -1,3 +1,8 @@
+# systemd service spec for pulseaudio running in system mode -- not recommended though!
+# on arch, put it under /etc/systemd/system/pulseaudio.service
+# start with: systemctl start pulseaudio.service
+# enable on boot: systemctl enable pulseaudio.service
+
 [Unit]
 Description=PulseAudio Daemon
 
