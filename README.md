@@ -16,6 +16,7 @@
 - anitbody
 - spicetify
 - xdo
+- xdotool
 
 ### Fonts
 - Font Awesome 5 Free
