@@ -24,7 +24,9 @@ Scripts I'm using:
 
 ### Fonts
 - Font Awesome 5 Free
-- Fira Code (Nerd Font patched)
+- Fira Code (Nerd Font patched
+- Noto Font
+- Noto Font Emoji
 
 Glava install:
 ```
