@@ -19,3 +19,9 @@ super + w
 
 super + {t,shift + t,s,f}
     bspc node -t '~{tiled,pseudo_tiled,floating,fullscreen}'
+
+super + h
+	bspc node -g hidden=on
+
+super + shift + h
+	~/.config/sxhkd/scripts/dmenu_unhide.sh
