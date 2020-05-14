@@ -17,6 +17,7 @@
 - spicetify
 - xdo
 - xdotool
+- xtitle
 - conky
 
 Scripts I'm using:
