@@ -19,6 +19,7 @@
 - xdotool
 - xtitle
 - conky
+- pulseaudio-control
 
 Scripts I'm using:
 - [puush](https://raw.githubusercontent.com/sunmockyang/puush-linux/master/puush)
